@@ -7,7 +7,17 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `Title from siteMetadata. So easy to change`,
   },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 }
 
