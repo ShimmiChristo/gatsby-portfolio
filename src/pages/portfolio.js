@@ -1,20 +1,25 @@
 import React from "react"
-import styles from "../styles/about-css-modules.module.css"
 import Projects from "../components/projects"
 
-console.log(styles);
 
 const Project = props => (
     <div className='projects'>
-        {props.name}
+            {props.name}
+        <h2 className="project-title">
+            {props.title}
+        </h2>
+        
     </div>
 )
 
-export default () => {
+export default () => (
     <Projects>
-        <Project name="Chris"
-
+        <Project 
+            name="Chris"
+            title="This is my first Title"
+            img="Portfolio Image"
         />
     </Projects>
-}
+)
+
 

@@ -8,6 +8,7 @@ const ListLink = props => (
 )
 
 export default ({ children }) => {
+    console.log(children);
     const data = useStaticQuery(
       graphql`
         query {
@@ -30,7 +31,9 @@ export default ({ children }) => {
                 <ListLink to="/about/">About</ListLink>
                 <ListLink to="/contact/">Contact</ListLink>
                 <ListLink to="/blog/">Blog</ListLink>
+                <ListLink to="/portfolio/">Portfolio</ListLink>
             </ul>
+
             </header>
             {children}
         </div>
