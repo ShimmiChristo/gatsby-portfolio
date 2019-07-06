@@ -1,7 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby";
+// import ImageLoader from "../../components/image-loader";
 import Projects from "../../components/projects";
-// import Layout from "../../components/layout";
+import Img from "gatsby-image";
 
 import groupsOf from "../../utils/groups-of";
 
@@ -10,17 +11,24 @@ export const frontmatter = {
     description: "Chris Shimmin's Portfolio."
 };
 
-// const Project = (props) => (
 const PortfolioIndex =  ({ data, ...rest }) => {
     const pageLinks = data.allJavascriptFrontmatter.edges.map(({ node: page }) => {
         const { styles, title, path } = page.frontmatter;
-
+        const media = 
+            page.frontmatter.media && 
+            page.frontmatter.media.find(item => item.type === 'image');
         return (
             <div key={path} className="portfolio-item col-xs-12 col-sm-4">
                 <Link to={path} className="portfolio-item-link">
                     <div className="portfolio-item-image" style={styles}>
+                        {media && (
+                            <Img
+                                fixed={media}
+                                alt="Gatsby Docs are awesome"
+                            />
+                        )}
                     </div>
-                    <span className="portfolio-item-text">{title}</span>
+                  <span className="portfolio-item-text">{title}</span>
                 </Link>
             </div>
         );
@@ -31,7 +39,6 @@ const PortfolioIndex =  ({ data, ...rest }) => {
           {page}
         </div>
     ));
-
     return (
         <Projects {...rest} frontmatter={frontmatter}>
              <div className='project'>
@@ -39,6 +46,7 @@ const PortfolioIndex =  ({ data, ...rest }) => {
                 <h2 className="project-title">
                     'SOmething'
                 </h2>
+
                 <div className="portfolio-items">{groups}</div>
              </div>
         </Projects>
@@ -48,6 +56,8 @@ const PortfolioIndex =  ({ data, ...rest }) => {
 
 export const portfolioQuery =  graphql`
 query portfolioQuery {
+
+      
     allJavascriptFrontmatter(
         filter: {frontmatter: {portfolio: {eq: true}}}, 
         sort: {fields: frontmatter___order, order: DESC}

@@ -1,12 +1,12 @@
 import React from "react";
-// import Layout from "../../../components/layout";
 import Projects from "../../../components/projects";
-
+// import ImageLoader from "../../../components/image-loader";
+import Img from "gatsby-image";
 
 
 export const frontmatter = {
     portfolio: true,
-    order: 3,
+    order: 1,
     title: "Project 1 ",
     color: "blue",
     description: "Description for project 1",
@@ -14,8 +14,8 @@ export const frontmatter = {
     media: [
       {
         type: "image",
-        img: "/images/agency/agency-poster.png",
-        placeholder: "/images/agency/agency-poster-small.png",
+        img: "/images/color-picker-winner.png",
+        placeholder: "/images/color-picker-winner.png",
         aspectRatio: 0.75
       }
     ],
@@ -25,7 +25,7 @@ export const frontmatter = {
   };
 
   const ProjectOne = props => {
-      const { title, styles, media } = frontmatter;
+      const { title, media } = frontmatter;
 
       return (
           <Projects {...props} frontmatter={frontmatter}>
@@ -33,6 +33,9 @@ export const frontmatter = {
                   <section className="project">
                     <div className='title'>
                         {title}
+                    </div>
+                    <div className="project-img">
+                     
                     </div>
                   </section>
               </div>

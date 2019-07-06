@@ -31,8 +31,16 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-sharp`, 
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, 
     `gatsby-transformer-remark`,
     'gatsby-transformer-javascript-frontmatter',
     `gatsby-plugin-sass`,
