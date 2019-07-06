@@ -21,9 +21,10 @@ const PortfolioIndex =  ({ data, ...rest }) => {
             <div key={path} className="portfolio-item col-xs-12 col-sm-4">
                 <Link to={path} className="portfolio-item-link">
                     <div className="portfolio-item-image" style={styles}>
+                        <img src={media.img} />
                         {media && (
                             <Img
-                                fixed={media}
+                                fixed={data.file.childImageSharp.fixed}
                                 alt="Gatsby Docs are awesome"
                             />
                         )}
@@ -46,7 +47,6 @@ const PortfolioIndex =  ({ data, ...rest }) => {
                 <h2 className="project-title">
                     'SOmething'
                 </h2>
-
                 <div className="portfolio-items">{groups}</div>
              </div>
         </Projects>
@@ -56,7 +56,17 @@ const PortfolioIndex =  ({ data, ...rest }) => {
 
 export const portfolioQuery =  graphql`
 query portfolioQuery {
-
+    file(
+        relativePath: { eq: "images/color-picker-winner.png" }
+    ) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       
     allJavascriptFrontmatter(
         filter: {frontmatter: {portfolio: {eq: true}}}, 
