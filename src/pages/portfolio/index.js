@@ -26,7 +26,7 @@ const PortfolioIndex =  ({ data, ...rest }) => {
                           aspectRatio={400 / 200}
                           styles={styles}
                       />
-                  <span className="portfolio-item-text">{title}</span>
+                  <span className="portfolio-item-title">{title}</span>
                 </Link>
             </div>
         );
