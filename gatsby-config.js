@@ -1,8 +1,9 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+ This is the main configuration file for a Gatsby site. This is where you can specify 
+ information about your site (metadata) like the site title and description, 
+ which Gatsby plugins you’d like to include, etc. 
+ (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+**/
 
 module.exports = {
   /* Your site config here */

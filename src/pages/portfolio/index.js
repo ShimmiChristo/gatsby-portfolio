@@ -32,7 +32,7 @@ const PortfolioIndex =  ({ data, ...rest }) => {
         );
     });
     const groups = groupsOf(pageLinks, 3).map((page, i) => (
-        <div key={i} className="row middle-xs start-xs">
+        <div key={i} className="row middle-xs between-xs">
           {page}
         </div>
     ));
