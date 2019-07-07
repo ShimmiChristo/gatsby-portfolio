@@ -1,8 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby";
-// import ImageLoader from "../../components/image-loader";
+import ImageLoader from "../../components/image-loader";
 import Projects from "../../components/projects";
-import Img from "gatsby-image";
 
 import groupsOf from "../../utils/groups-of";
 
@@ -18,35 +17,31 @@ const PortfolioIndex =  ({ data, ...rest }) => {
             page.frontmatter.media && 
             page.frontmatter.media.find(item => item.type === 'image');
         return (
-            <div key={path} className="portfolio-item col-xs-12 col-sm-4">
+            <div key={path} className="portfolio-item">
                 <Link to={path} className="portfolio-item-link">
-                    <div className="portfolio-item-image" style={styles}>
-                        <img src={media.img} />
-                        {media && (
-                            <Img
-                                fixed={data.file.childImageSharp.fixed}
-                                alt="Gatsby Docs are awesome"
-                            />
-                        )}
-                    </div>
+                    <ImageLoader 
+                          img={media.img}
+                          alt="alt tag for image"
+                          width="100%"
+                          aspectRatio={400 / 200}
+                          styles={styles}
+                      />
                   <span className="portfolio-item-text">{title}</span>
                 </Link>
             </div>
         );
     });
-    
     const groups = groupsOf(pageLinks, 3).map((page, i) => (
-        <div key={i} className="row">
+        <div key={i} className="row middle-xs start-xs">
           {page}
         </div>
     ));
     return (
         <Projects {...rest} frontmatter={frontmatter}>
-             <div className='project'>
-                <img src='' className="port-feature-img" />
-                <h2 className="project-title">
-                    'SOmething'
-                </h2>
+             <div className='portfolio'>
+                <h1 className="project-title">
+                    Portfolio
+                </h1>
                 <div className="portfolio-items">{groups}</div>
              </div>
         </Projects>

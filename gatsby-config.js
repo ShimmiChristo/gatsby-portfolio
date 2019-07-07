@@ -7,7 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Title from siteMetadata. So easy to change`,
+    title: `Chris`,
+    footer: 'Portfolio Page - Created with GatsbyJS'
   },
   plugins: [
     {
@@ -17,20 +18,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/public/`,
-      },
-    },
+
     {
       resolve: `gatsby-plugin-sharp`,
       options: {

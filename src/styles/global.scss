@@ -1,7 +1,61 @@
+@import '~flexboxgrid';
+$primary-color: #00b2ed;
+$primary-hover: #07C1FF;
+$secondary-color: #0487B2;
+$secondary-hover: #036C8E;
+$h1: 36px;
+$h2: 28px;
+$h3: 22px;
+
 html {
-    max-width: 700px;
+    max-width: 1200px;
+    margin: 0 auto;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
 }
+body {
+  margin: 0;
+}
+h1 {
+  font-size: $h1;
+}
+h2 {
+  font-size: $h2;
+}
+h3 {
+  font-size: $h3;
+  font-weight: bold;
+}
+.button {
+  background-color: #e7e7e7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #cfcfcf;
+    color: white;
+  }
+}
+.button-primary {
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+.row {
+  margin: 0 auto;
+}
+
 .Container {
     max-width: 60rem;
     margin: 3rem auto 0;
@@ -14,4 +68,18 @@ html {
     p {
       color: #aaa;
     }
+  }
+  .padding20 {
+    padding: 20px;
+
+  }
+  .portfolio-copy {
+
+    &--main {
+      min-height: 200px;
+    }
+  }
+
+  footer {
+    padding-top: 20px;
   }
