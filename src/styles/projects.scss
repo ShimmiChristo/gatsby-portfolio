@@ -4,6 +4,7 @@ $primary-color: #00b2ed;
 $primary-hover: #07C1FF;
 $secondary-color: #0487B2;
 $secondary-hover: #036C8E;
+$primary-text-color: #333;
 $h1: 36px;
 $h2: 28px;
 $h3: 22px;
@@ -14,6 +15,8 @@ $h3: 22px;
 .row {
     display: inline-flex;
     width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 .portfolio-item {
     width: 32%;
@@ -21,12 +24,14 @@ $h3: 22px;
     margin: 10px 0;
     background: #f5f6f7;
     box-sizing: border-box;
+    min-height: calc(100% - 60px);
   
     &-title {
      text-align: left;
      font-size: $h3;
      font-weight: bold;
      padding: 10px 0;
+     border-top: 1px solid rgb(238, 238, 238);
     }
 
     &-link {
@@ -40,6 +45,7 @@ $h3: 22px;
   
     &-image {
       width: 100%;
+      min-height: 200px;
       
       img {
         width: 100%;
@@ -47,7 +53,7 @@ $h3: 22px;
     }
 }
 .project-media-item {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background: #f5f6f7;
 }
 

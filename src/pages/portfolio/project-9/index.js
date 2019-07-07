@@ -4,34 +4,34 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://midwestrealty.com/all-properties/",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 9,
+    title: "Realtor Page Custom Page Filter",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: "A custom page with the collection of all properties listed, with clickable filter buttons. Also included is a modified search bar that searches by post title and category. Created with PHP for the filter and CSS for the page design.",
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-9",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/property-page-cover.png",
+        placeholder: "/images/property_page.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/property-page-img-1.png",
+        placeholder: "/images/property-page-img-1.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/property-page-img-2.png",
+        placeholder: "/images/property-page-img-2.png",
         aspectRatio: 0.75
       }
     ],

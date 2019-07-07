@@ -18,20 +18,20 @@ export const frontmatter = {
     media: [
       {
         type: "image",
-        img: "/images/simple_calc.png",
+        img: "/images/simple-calc-cover.png",
         placeholder: "/images/simple_calc.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/color-picker-winner.png",
-        placeholder: "/images/color-picker-winner.png",
+        img: "/images/simple-calc-img-1.png",
+        placeholder: "/images/simple-calc.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/color-picker-winner.png",
-        placeholder: "/images/color-picker-winner.png",
+        img: "/images/simple-calc-img-2.png",
+        placeholder: "/images/simple_calc.png",
         aspectRatio: 0.75
       }
     ],

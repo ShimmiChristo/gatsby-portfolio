@@ -4,34 +4,34 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://www.chrisshimmin.com/projects_folder/TicTacToe/index",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 5,
+    title: "Tic Tac Toe",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: "A tic-tac-toe game built with JS, HTML, and CSS",
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-5",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/tic-tac-toe-cover.png",
+        placeholder: "/images/tic_tac_toe.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/tic-tac-toe-img-1.png",
+        placeholder: "/images/tic-tac-toe-img-1.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/tic-tac-toe-img-2.png",
+        placeholder: "/images/tic-tac-toe-img-2.png",
         aspectRatio: 0.75
       }
     ],

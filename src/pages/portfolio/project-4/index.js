@@ -4,12 +4,12 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://google.com",
-    siteTitle: "GOOGLE",
+    siteUrl: "https://www.chrisshimmin.com/projects_folder/breakout/index",
+    siteTitle: "View Website",
     order: 4,
-    title: "Project 4",
+    title: "Breakout Game",
     color: "blue",
-    description: "Description for project 4",
+    description: "A breakout game built with JS, HTML, and CSS",
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
@@ -18,8 +18,20 @@ export const frontmatter = {
     media: [
       {
         type: "image",
-        img: "/images/color-picker-winner.png",
-        placeholder: "/images/color-picker-winner.png",
+        img: "/images/breakout-cover.jpg",
+        placeholder: "/images/breakout.jpg",
+        aspectRatio: 0.75
+      },
+      {
+        type: "image",
+        img: "/images/breakout-img-1.png",
+        placeholder: "/images/breakout-img-1.png",
+        aspectRatio: 0.75
+      },
+      {
+        type: "image",
+        img: "/images/breakout-img-2.png",
+        placeholder: "/images/breakout-img-2.png",
         aspectRatio: 0.75
       }
     ],
@@ -29,11 +41,11 @@ export const frontmatter = {
   };
 
   const Project = props => {
-      const { title, description, siteTitle, siteUrl } = frontmatter;
+      const { title, description, siteTitle, siteUrl, media } = frontmatter;
 
       return (
           <Projects {...props} frontmatter={frontmatter}>
-              <div className="portfolio">
+              <div className="project">
                   <section className="content-container">
                     <div 
                       className="row middle-xs"
@@ -64,7 +76,7 @@ export const frontmatter = {
                         className="col-xs-12 project-media-item"
                       >
                       <ImageLoader 
-                          img="/images/color-picker.png"
+                          img={media[0].img}
                           alt="alt tag for image"
                           width="100%"
                           aspectRatio={400 / 200}
@@ -79,7 +91,7 @@ export const frontmatter = {
                         className="col-xs-6 project-media-item"
                       >
                       <ImageLoader 
-                          img="/images/color-picker.png"
+                          img={media[1].img}
                           alt="alt tag for image"
                           width="100%"
                           aspectRatio={400 / 200}
@@ -89,7 +101,7 @@ export const frontmatter = {
                         className="col-xs-6 project-media-item"
                       >
                       <ImageLoader 
-                          img="/images/color-picker.png"
+                         img={media[2].img}
                           alt="alt tag for image"
                           width="100%"
                           aspectRatio={400 / 200}

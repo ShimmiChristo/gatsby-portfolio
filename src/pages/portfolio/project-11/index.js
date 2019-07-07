@@ -4,34 +4,36 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: null,
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 11,
+    title: "Moi Time Start Up Tech Company",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: 
+        `Create and make edits to the Moi Time website. Collaboration with other developers and designer.
+         Made edit to Ruby on Rails website. Bootstrap and SCSS for design changes. MongoDB for Database edits.`,
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-11",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/moi-time-cover.png",
+        placeholder: "/images/moi_time.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/moi-time-img-1.png",
+        placeholder: "/images/moi_time.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/moi-time-img-2.png",
+        placeholder: "/images/moi_time.png",
         aspectRatio: 0.75
       }
     ],
@@ -42,6 +44,7 @@ export const frontmatter = {
 
   const Project = props => {
       const { title, description, siteTitle, siteUrl, media } = frontmatter;
+      const siteTitleButton = siteUrl !== null ? <button className="button button-primary">{siteTitle}</button> : null;
 
       return (
           <Projects {...props} frontmatter={frontmatter}>
@@ -63,7 +66,7 @@ export const frontmatter = {
                       <section className="col-xs-4 portfolio-website-link">
                         <div className=" row middle-xs">
                           <a href={siteUrl} target="_blank">
-                            <button className="button button-primary">{siteTitle}</button>
+                            {siteTitleButton}
                           </a>
                         </div>
                       </section>

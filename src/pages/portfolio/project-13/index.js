@@ -4,34 +4,35 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://stripehosting.com/",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 13,
+    title: "Stripe Hosting Website",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: 
+        `A custom made WordPress website for my Web Hosting Company. Created with WordPress, Sass, JS, HTML, and CSS.`,
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-13",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/stripehosting-cover.png",
+        placeholder: "/images/stripehosting.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/stripehosting-img-1.png",
+        placeholder: "/images/stripehosting-img-1.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/stripehosting-img-2.png",
+        placeholder: "/images/stripehosting-img-2.png",
         aspectRatio: 0.75
       }
     ],
@@ -42,6 +43,7 @@ export const frontmatter = {
 
   const Project = props => {
       const { title, description, siteTitle, siteUrl, media } = frontmatter;
+      const siteTitleButton = siteUrl !== null ? <button className="button button-primary">{siteTitle}</button> : null;
 
       return (
           <Projects {...props} frontmatter={frontmatter}>
@@ -63,7 +65,7 @@ export const frontmatter = {
                       <section className="col-xs-4 portfolio-website-link">
                         <div className=" row middle-xs">
                           <a href={siteUrl} target="_blank">
-                            <button className="button button-primary">{siteTitle}</button>
+                            {siteTitleButton}
                           </a>
                         </div>
                       </section>

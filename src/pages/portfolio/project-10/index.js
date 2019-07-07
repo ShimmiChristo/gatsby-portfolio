@@ -4,34 +4,34 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://midwestrealty.com/",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 10,
+    title: "Commercial Real Estate Website",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: "A freelance WordPress website with specific additions. Created with WordPress, HTML, CSS, and PHP.",
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-10",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/MWRfrontPage-cover.png",
+        placeholder: "/images/MWRfrontPage.jpg",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/MWR-img-1.png",
+        placeholder: "/images/MWR-img-1.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/MWR-img-2.png",
+        placeholder: "/images/MWR-img-2.png",
         aspectRatio: 0.75
       }
     ],

@@ -4,34 +4,34 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://www.chrisshimmin.com/projects_folder/hobokencoders/index",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 6,
+    title: "Hoboken Coders",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: "A blog potential blog created with hopes of a MeetUp group.",
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-6",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/hobokenCoders-cover.jpg",
+        placeholder: "/images/hobokenCoders.jpg",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/hobokenCoders-img-1.jpg",
+        placeholder: "/images/hobokenCoders-img-1.jpg",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/hobokenCoders-img-2.jpg",
+        placeholder: "/images/hobokenCoders-img-2.jpg",
         aspectRatio: 0.75
       }
     ],

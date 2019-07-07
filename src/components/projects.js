@@ -27,7 +27,7 @@ export default ({ children }) => {
   return (
       <div style={{ margin: `3rem auto`, maxWidth: 1200 }}>
           <header style={{ marginBottom: `1.5rem`, padding: `0 1rem` }}>
-          <Link to="/portfolio/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+          <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
               <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title} </h3>
           </Link>
           <ul style={{ listStyle: `none`, float: `right` }}>

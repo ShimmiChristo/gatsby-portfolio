@@ -4,34 +4,34 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://chrisshimmin.com/projects_folder/usa-map/index",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 7,
+    title: "Learn the USA States",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: "A SVG Map (using groups and paths) of the United States. Test how well you know the United Sates. Hover over each state and click to reveal the answer. ",
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-7",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/us-map-cover.png",
+        placeholder: "/images/us-map.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/us-map-img-1.png",
+        placeholder: "/images/us-map-img-1.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/us-map-img-2.png",
+        placeholder: "/images/us-map-img-2.png",
         aspectRatio: 0.75
       }
     ],

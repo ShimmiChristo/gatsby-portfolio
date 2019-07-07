@@ -4,34 +4,36 @@ import ImageLoader from "../../../components/image-loader";
 
 export const frontmatter = {
     portfolio: true,
-    siteUrl: "https://www.chrisshimmin.com/projects_folder/studentLoanCalc/index",
+    siteUrl: "https://shopduggal.com/",
     siteTitle: "View Website",
-    order: 2,
-    title: "Student Loan Calculator",
+    order: 15,
+    title: "Shopddugal.com E-Commerce Website",
     color: "blue",
-    description: "A student load calculator created with JavaScript, Bootstrp, HTML, and CSS.",
+    description: 
+        `Work and and colaborate with multiple designers and other web developers. Solely built custom HTML and CSS 
+         pages with the direction of a head designer. Callaborated with another web developer. Managed with JS, Sass, JS, HTML, CSS, and a Restful API.`,
     role: "This is the role",
     goal: "this is the goal",
     timeframe: "this is the time frame",
     functionality: "functionality",
-    path: "/portfolio/project-2",
+    path: "/portfolio/project-15",
     media: [
       {
         type: "image",
-        img: "/images/student-loan-calc-cover.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/shopduggal-cover.png",
+        placeholder: "/images/shopduggal.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-1.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/shopduggal-img-1.png",
+        placeholder: "/images/shopduggal.png",
         aspectRatio: 0.75
       },
       {
         type: "image",
-        img: "/images/student-loan-calc-img-2.png",
-        placeholder: "/images/student_loan_calc.png",
+        img: "/images/shopduggal-img-2.png",
+        placeholder: "/images/shopduggal.png",
         aspectRatio: 0.75
       }
     ],
@@ -42,6 +44,7 @@ export const frontmatter = {
 
   const Project = props => {
       const { title, description, siteTitle, siteUrl, media } = frontmatter;
+      const siteTitleButton = siteUrl !== null ? <button className="button button-primary">{siteTitle}</button> : null;
 
       return (
           <Projects {...props} frontmatter={frontmatter}>
@@ -63,7 +66,7 @@ export const frontmatter = {
                       <section className="col-xs-4 portfolio-website-link">
                         <div className=" row middle-xs">
                           <a href={siteUrl} target="_blank">
-                            <button className="button button-primary">{siteTitle}</button>
+                            {siteTitleButton}
                           </a>
                         </div>
                       </section>
