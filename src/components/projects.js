@@ -31,9 +31,7 @@ export default ({ children }) => {
               <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title} </h3>
           </Link>
           <ul style={{ listStyle: `none`, float: `right` }}>
-              <ListLink to="/portfolio/">Home</ListLink>
-              <ListLink to="/about/">About</ListLink>
-              <ListLink to="/contact/">Contact</ListLink>
+              <ListLink to="/aboutme">About</ListLink>
               <ListLink to="/blog/">Blog</ListLink>
               <ListLink to="/portfolio/">Portfolio</ListLink>
           </ul>

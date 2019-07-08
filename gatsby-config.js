@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     {
+      start_url: `/portfolio`,
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
