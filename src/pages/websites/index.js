@@ -6,8 +6,8 @@ import Projects from "../../components/projects"
 import groupsOf from "../../utils/groups-of"
 
 export const frontmatter = {
-  title: "Portfolio",
-  description: "Chris Shimmin's Portfolio.",
+  title: "Websites",
+  description: "Chris Shimmin's website projects.",
 }
 
 const PortfolioIndex = ({ data, ...rest }) => {
@@ -41,15 +41,15 @@ const PortfolioIndex = ({ data, ...rest }) => {
   return (
     <Projects {...rest} frontmatter={frontmatter}>
       <div className="portfolio">
-        <h1 className="project-title">Portfolio</h1>
+        <h1 className="project-title">Websites</h1>
         <div className="portfolio-items">{groups}</div>
       </div>
     </Projects>
   )
 }
 
-export const portfolioQuery = graphql`
-  query portfolioQuery {
+export const websiteQuery = graphql`
+  query websiteQuery {
     file(relativePath: { eq: "images/color-picker-winner.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
@@ -61,7 +61,9 @@ export const portfolioQuery = graphql`
     }
 
     allJavascriptFrontmatter(
-      filter: { frontmatter: { portfolio: { eq: true } } }
+      filter: {
+        frontmatter: { category: { eq: "website" }, portfolio: { eq: true } }
+      }
       sort: { fields: frontmatter___order, order: DESC }
     ) {
       edges {
