@@ -8,6 +8,8 @@ export const frontmatter = {
   tags: ["HTML, CSS, Bootstrap, JavaScript"],
   siteUrl: "https://www.chrisshimmin.com/projects_folder/calculator/index",
   siteTitle: "View Website",
+  githubUrl: "",
+  githubTitle: "",
   order: 1,
   title: "Calculator",
   color: "blue",
@@ -48,57 +50,57 @@ const Project = props => {
 
   return (
     <Projects {...props} frontmatter={frontmatter}>
-      <div className="project">
-        <section className="content-container">
+      <div className='project'>
+        <section className='content-container'>
           <div
-            className="row middle-xs"
+            className='row middle-xs'
             style={{ background: "#f5f6f7", padding: `1rem 1rem 2rem` }}
           >
-            <section className="col-xs-8 portfolio-copy--main">
-              <h1 className="project-title"> {title} </h1>
-              <div className="project-description">
+            <section className='col-xs-8 portfolio-copy--main'>
+              <h1 className='project-title'> {title} </h1>
+              <div className='project-description'>
                 <h3>Description</h3>
                 <p>{description}</p>
               </div>
             </section>
-            <section className="col-xs-4 portfolio-website-link">
-              <div className=" row middle-xs">
-                <a href={siteUrl} target="_blank">
-                  <button className="button button-primary">{siteTitle}</button>
+            <section className='col-xs-4 portfolio-website-link'>
+              <div className=' row middle-xs'>
+                <a href={siteUrl} target='_blank'>
+                  <button className='button button-primary'>{siteTitle}</button>
                 </a>
               </div>
             </section>
           </div>
         </section>
 
-        <section className="project-media">
-          <div className="project-cover-image">
-            <div className="col-xs-12 project-media-item">
+        <section className='project-media'>
+          <div className='project-cover-image'>
+            <div className='col-xs-12 project-media-item'>
               <ImageLoader
                 img={media[0].img}
-                alt="alt tag for image"
-                width="100%"
+                alt='alt tag for image'
+                width='100%'
                 aspectRatio={400 / 200}
               />
             </div>
           </div>
         </section>
 
-        <section className="project-media">
-          <div className="row">
-            <div className="col-xs-6 project-media-item">
+        <section className='project-media'>
+          <div className='row'>
+            <div className='col-xs-6 project-media-item'>
               <ImageLoader
                 img={media[1].img}
-                alt="alt tag for image"
-                width="100%"
+                alt='alt tag for image'
+                width='100%'
                 aspectRatio={400 / 200}
               />
             </div>
-            <div className="col-xs-6 project-media-item">
+            <div className='col-xs-6 project-media-item'>
               <ImageLoader
                 img={media[2].img}
-                alt="alt tag for image"
-                width="100%"
+                alt='alt tag for image'
+                width='100%'
                 aspectRatio={400 / 200}
               />
             </div>

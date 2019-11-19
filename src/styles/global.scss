@@ -1,19 +1,21 @@
-@import '~flexboxgrid';
+@import "~flexboxgrid";
 $primary-color: #00b2ed;
-$primary-hover: #07C1FF;
-$secondary-color: #0487B2;
-$secondary-hover: #036C8E;
+$primary-hover: #07c1ff;
+$secondary-color: #0487b2;
+$secondary-hover: #036c8e;
+$success-color: #28a745;
+$success-hover: #218838;
 $primary-text-color: #333;
 $h1: 36px;
 $h2: 28px;
 $h3: 22px;
 
 html {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    color: $primary-text-color;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  color: $primary-text-color;
 }
 body {
   margin: 0;
@@ -37,6 +39,7 @@ a {
 .button {
   background-color: #e7e7e7;
   border: none;
+  margin: 5px;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -60,34 +63,40 @@ a {
     background-color: $primary-hover;
   }
 }
+.button-success {
+  color: #fff;
+  background-color: $success-color;
+
+  &:hover {
+    background-color: $success-hover;
+  }
+}
 .row {
   margin: 0 auto;
 }
 
 .Container {
-    max-width: 60rem;
-    margin: 3rem auto 0;
-    font-family: sans-serif;
-    
-    h1 {
-      color: #333;
-    }
-    
-    p {
-      color: #aaa;
-    }
-  }
-  .padding20 {
-    padding: 20px;
+  max-width: 60rem;
+  margin: 3rem auto 0;
+  font-family: sans-serif;
 
-  }
-  .portfolio-copy {
-
-    &--main {
-      min-height: 200px;
-    }
+  h1 {
+    color: #333;
   }
 
-  footer {
-    padding-top: 20px;
+  p {
+    color: #aaa;
   }
+}
+.padding20 {
+  padding: 20px;
+}
+.portfolio-copy {
+  &--main {
+    min-height: 200px;
+  }
+}
+
+footer {
+  padding-top: 20px;
+}

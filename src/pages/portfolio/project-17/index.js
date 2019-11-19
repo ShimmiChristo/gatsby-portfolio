@@ -8,6 +8,8 @@ export const frontmatter = {
   tags: ["HTML, CSS, Express, Node, AWS, Nginx, API"],
   siteUrl: "http://code.chrisshimmin.com/ncaa/",
   siteTitle: "View Website",
+  githubUrl: "https://github.com/ShimmiChristo/scores-api",
+  githubTitle: "View Code",
   order: 17,
   title: "NCAA Scores Website Scraper - Express, Node, AWS, Nginx",
   color: "blue",
@@ -44,30 +46,45 @@ export const frontmatter = {
 }
 
 const Project = props => {
-  const { title, description, siteTitle, siteUrl, media } = frontmatter
+  const {
+    title,
+    description,
+    siteTitle,
+    siteUrl,
+    media,
+    githubTitle,
+    githubUrl,
+  } = frontmatter
   const siteTitleButton =
     siteUrl !== null ? (
-      <button className="button button-primary">{siteTitle}</button>
+      <button className='button button-primary'>{siteTitle}</button>
+    ) : null
+  const githubTitleButton =
+    githubUrl !== null ? (
+      <button className='button button-success'>{githubTitle}</button>
     ) : null
 
   return (
     <Projects {...props} frontmatter={frontmatter}>
-      <div className="project">
-        <section className="content-container">
+      <div className='project'>
+        <section className='content-container'>
           <div
-            className="row middle-xs"
+            className='row middle-xs'
             style={{ background: "#f5f6f7", padding: `1rem 1rem 2rem` }}
           >
-            <section className="col-xs-8 portfolio-copy--main">
-              <h1 className="project-title"> {title} </h1>
-              <div className="project-description">
+            <section className='col-xs-8 portfolio-copy--main'>
+              <h1 className='project-title'> {title} </h1>
+              <div className='project-description'>
                 <h3>Description</h3>
                 <p>{description}</p>
               </div>
             </section>
-            <section className="col-xs-4 portfolio-website-link">
-              <div className=" row middle-xs">
-                <a href={siteUrl} target="_blank">
+            <section className='col-xs-4 portfolio-website-link'>
+              <div className=' row middle-xs'>
+                <a href={githubUrl} target='_blank'>
+                  {githubTitleButton}
+                </a>
+                <a href={siteUrl} target='_blank'>
                   {siteTitleButton}
                 </a>
               </div>
@@ -75,34 +92,34 @@ const Project = props => {
           </div>
         </section>
 
-        <section className="project-media">
-          <div className="project-cover-image">
-            <div className="col-xs-12 project-media-item">
+        <section className='project-media'>
+          <div className='project-cover-image'>
+            <div className='col-xs-12 project-media-item'>
               <ImageLoader
                 img={media[0].img}
-                alt="alt tag for image"
-                width="100%"
+                alt='alt tag for image'
+                width='100%'
                 aspectRatio={400 / 200}
               />
             </div>
           </div>
         </section>
 
-        <section className="project-media">
-          <div className="row">
-            <div className="col-xs-6 project-media-item">
+        <section className='project-media'>
+          <div className='row'>
+            <div className='col-xs-6 project-media-item'>
               <ImageLoader
                 img={media[1].img}
-                alt="alt tag for image"
-                width="100%"
+                alt='alt tag for image'
+                width='100%'
                 aspectRatio={400 / 200}
               />
             </div>
-            <div className="col-xs-6 project-media-item">
+            <div className='col-xs-6 project-media-item'>
               <ImageLoader
                 img={media[2].img}
-                alt="alt tag for image"
-                width="100%"
+                alt='alt tag for image'
+                width='100%'
                 aspectRatio={400 / 200}
               />
             </div>
